@@ -19,10 +19,12 @@ export default function Hi({ message }: any) {
   } = useSubscription(user?.id ? GET_POST_BY_ID_FOR_USER : GET_POST_BY_ID, {
     variables: user?.id
       ? {
-          postId: id,
-          userId: user?.id,
-        }
-      : {},
+        postId: id,
+        userId: user?.id,
+      }
+      : {
+        postId: id,
+      },
   })
 
   console.log(data)
