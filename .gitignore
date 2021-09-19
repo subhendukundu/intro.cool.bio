@@ -4,3 +4,5 @@ dist
 dist-ssr
 node_modules
 **/_*
+.env
+.npmrc
